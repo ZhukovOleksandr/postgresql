@@ -32,8 +32,6 @@ select concat('We have ', count(gender), ' boys') from users where gender = 'm'
 union
 select concat('We have ', count(gender), ' girls') from users where gender = 'f';
 
-ver2
-select concat('We have ', count(gender), case when gender = 'm' then ' boys' when gender = 'f' then ' girls' else 'who are you?' end) result from users group by gender;
 ----------------------------------------------------------------------------------
 Task 3
 Получить результат вида:
@@ -49,5 +47,4 @@ select concat('This is ', name, ', he has email ', mail) from users where gender
 module-# union
 module-# select concat('This is ', name, ', she has email ', mail) from users where gender = 'f';
 
-ver2
-select concat('This is ', name, ',', case when gender = 'm' then ' he ' when gender = 'f' then ' she ' else ' ' end, 'has email ', mail) result from users;
+
